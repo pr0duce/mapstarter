@@ -5,7 +5,8 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js " ></script>
 	<title>mapstarter</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>	
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="cities.js"></script>	
 	<script type="text/javascript">
 
 		var map;
@@ -29,7 +30,44 @@
 			}).addTo(map);
 			*/
 
-			
+			//ADD MARKER
+			//var marker = L.marker([0,0]);
+			//marker.bindPopup('Hello World!');
+			//marker.addTo(map);
+
+			//ADD LINE
+			/*
+			var polyline = L.polyline([
+				[0,90],
+				[90,0],
+				[0,-90],
+				[-90,0],
+				[0,90]
+				]);
+			polyline.addTo(map);
+			*/
+
+			//ADD POLYGON
+			/*
+			var polygon = L.polygon([
+				[45,45],
+				[45,-45],
+				[-45,-45],
+				[-45,45]
+				]);
+			polygon.addTo(map);
+			*/
+
+			//ADD GEOJSON
+			/*
+			var geoJson = L.geoJson(cities,{
+				onEachFeature: function(feature,layer){
+					layer.bindPopup(feature.properties.NAMELSAD);
+				}
+			});
+			geoJson.addTo(map);
+			*/
+
 		}); 
 
 
